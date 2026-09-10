@@ -88,7 +88,7 @@ python3 --version
 
 ```bash
 # Di chuyển vào thư mục dự án
-cd SoftwarePictureLite
+cd Picture-Lite
 
 # (Khuyến nghị) Tạo môi trường ảo
 python3 -m venv venv
