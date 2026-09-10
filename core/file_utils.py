@@ -2,10 +2,13 @@
 core/file_utils.py
 -------------------
 Các hàm tiện ích thao tác với file/thư mục: quét cây thư mục tìm ảnh,
-tạo tên file đầu ra, định dạng dung lượng hiển thị, v.v.
+tạo tên file đầu ra, định dạng dung lượng hiển thị, quản lý backup
+trong thư mục cache tạm, và mở thư mục bằng trình quản lý file hệ điều hành.
 """
 
 import os
+import sys
+import subprocess
 from core.compressor import SUPPORTED_FORMATS
 
 
@@ -65,3 +68,47 @@ def format_size(size_bytes: int) -> str:
     if size_bytes < 1024 ** 2:
         return f"{size_bytes / 1024:.1f} KB"
     return f"{size_bytes / (1024 ** 2):.2f} MB"
+
+
+def build_temp_cache_backup_path(original_path: str, temp_cache_dir: str) -> str:
+    """
+    Tạo đường dẫn backup trong thư mục cache tạm hệ thống, MIRROR lại toàn bộ
+    đường dẫn gốc (ổ đĩa + đường dẫn con) để:
+        1. Không cần đổi tên thành "_old" (giữ nguyên tên file gốc).
+        2. Không bị trùng/ghi đè giữa các ảnh cùng tên ở các thư mục khác nhau.
+
+    Ví dụ trên Windows:
+        D:\\Projects\\Game\\ui\\icon.png
+        -> <temp_cache_dir>\\D\\Projects\\Game\\ui\\icon.png
+    """
+    abs_path = os.path.abspath(original_path)
+    drive, tail = os.path.splitdrive(abs_path)
+    drive_name = drive.replace(":", "") if drive else "root"
+    tail = tail.lstrip("\\/")
+    # Chuẩn hoá dấu phân cách theo hệ điều hành hiện tại
+    tail_parts = tail.replace("\\", "/").split("/")
+    return os.path.join(temp_cache_dir, drive_name, *tail_parts)
+
+
+def has_temp_cache_backup(original_path: str, temp_cache_dir: str) -> bool:
+    """Kiểm tra ảnh này đã từng được backup vào thư mục cache tạm hay chưa."""
+    backup_path = build_temp_cache_backup_path(original_path, temp_cache_dir)
+    return os.path.exists(backup_path)
+
+
+def open_folder_in_explorer(path: str) -> None:
+    """
+    Mở 1 thư mục bằng trình quản lý file mặc định của hệ điều hành
+    (Explorer trên Windows, Finder trên macOS, hoặc trình quản lý file
+    mặc định trên Linux). Tự động tạo thư mục nếu chưa tồn tại.
+    """
+    os.makedirs(path, exist_ok=True)
+    try:
+        if sys.platform.startswith("win"):
+            os.startfile(path)  # type: ignore[attr-defined]
+        elif sys.platform == "darwin":
+            subprocess.Popen(["open", path])
+        else:
+            subprocess.Popen(["xdg-open", path])
+    except Exception as error:  # noqa: BLE001
+        print(f"[Lỗi mở thư mục] {path}: {error}")

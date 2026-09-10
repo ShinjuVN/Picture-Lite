@@ -1,5 +1,7 @@
 {
-    "save_path": "C:/Users/Admin/Downloads",
-    "quality": 78,
-    "theme": "dark"
+    "save_path": "~/Downloads",
+    "quality": 85,
+    "theme": "dark",
+    "keep_old_backup": true,
+    "backup_to_temp_cache": false
 }
