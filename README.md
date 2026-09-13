@@ -164,6 +164,7 @@ Dự án này được phát hành dưới giấy phép **[Creative Commons Attr
 - ❌ **KHÔNG ĐƯỢC PHÉP**: Sử dụng mã nguồn (nguyên bản hoặc biến tấu) cho các mục đích thương mại, tham gia nhận thưởng / săn giải thưởng tại các cuộc thi, hoặc phục vụ mục đích thương mại của bất kỳ tổ chức / doanh nghiệp nào.
 
 Nếu muốn sử dụng ngoài phạm vi trên (ví dụ mục đích thương mại), vui lòng liên hệ trực tiếp tác giả dự án để xin phép.
+Lưu ý: Giấy phép CC BY-NC 4.0 hiện tại áp dụng trên toàn bộ các commit thuộc repository này không có ngoại lệ kể cả các commit cũ sử dụng README cũ
 
 Dự án cũng sử dụng các thư viện mã nguồn mở, miễn phí bên thứ ba sau (giấy phép riêng của từng thư viện vẫn giữ nguyên, không bị ảnh hưởng bởi CC BY-NC 4.0 của phần mã nguồn Picture-Lite):
 
