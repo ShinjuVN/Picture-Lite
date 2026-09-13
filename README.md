@@ -1,8 +1,10 @@
-# 🖼 Software Picture Lite
+# 🖼 Picture Lite
 
 Ứng dụng Desktop **mã nguồn mở**, giao diện nhẹ và đẹp, giúp nén ảnh (PNG, JPG, JPEG, WEBP) nhanh chóng — hỗ trợ nén đơn lẻ và nén hàng loạt cả một cây thư mục.
 
 Xây dựng bằng **Python + CustomTkinter + Pillow** (100% thư viện miễn phí, mã nguồn mở).
+
+📄 Giấy phép: **CC BY-NC 4.0** (phi thương mại) — xem chi tiết ở mục [6. Giấy phép](#6-giấy-phép) hoặc file [LICENSE](./LICENSE).
 
 ---
 
@@ -46,10 +48,15 @@ Nếu bạn chỉ muốn cài phần mềm để sử dụng ngay mà không c�
 
 Dành cho những ai muốn tự mày mò, tùy biến hoặc đóng góp mã nguồn cho dự án.
 
+> ⚠️ Lưu ý: dự án phát hành theo giấy phép **CC BY-NC 4.0** — bạn được tự do đọc, sửa,
+> biến tấu mã nguồn để học tập / dùng cá nhân, nhưng **không được dùng cho mục đích
+> thương mại**. Xem chi tiết ở mục [6. Giấy phép](#6-giấy-phép).
+
 ### 2.1. Cấu trúc dự án
 
 ```
-SoftwarePictureLite/
+Picture-Lite-1.1.0/
+├── .gitignore
 ├── assets/                     # Icon và hình ảnh giao diện
 │   └── icon.png
 ├── config/                     # File cấu hình
@@ -67,9 +74,9 @@ SoftwarePictureLite/
 │   ├── single_compress_frame.py
 │   ├── batch_compress_frame.py
 │   └── settings_frame.py
-├── main.py                     # File chạy chính
-├── requirements.txt
-└── README.md
+├── Picture Lite.py             # File chạy chính
+├── README.md
+└── requirements.txt
 ```
 
 **Nguyên tắc kiến trúc:** `core/` xử lý toàn bộ logic (nén ảnh, quét file, cấu hình) và **không hề import bất kỳ thứ gì từ `gui/`**. Điều này giúp logic dễ kiểm thử độc lập (unit test) và dễ tái sử dụng nếu sau này muốn đổi giao diện.
@@ -88,7 +95,7 @@ python3 --version
 
 ```bash
 # Di chuyển vào thư mục dự án
-cd Picture-Lite
+cd Picture-Lite-1.1.0
 
 # (Khuyến nghị) Tạo môi trường ảo
 python3 -m venv venv
@@ -106,8 +113,10 @@ pip install -r requirements.txt
 #### Bước 3 — Chạy ứng dụng
 
 ```bash
-python main.py
+python "Picture Lite.py"
 ```
+
+> Lưu ý dấu ngoặc kép bao quanh tên file vì tên file có khoảng trắng.
 
 Ứng dụng sẽ tự động tạo file `config/settings.json` (nếu chưa có) với đường dẫn lưu mặc định là thư mục `Downloads` của bạn.
 
@@ -149,9 +158,14 @@ pyinstaller PictureLite.spec
 
 ## 6. Giấy phép
 
-Dự án sử dụng hoàn toàn các thư viện mã nguồn mở, miễn phí:
+Dự án này được phát hành dưới giấy phép **[Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)](https://creativecommons.org/licenses/by-nc/4.0/)**. Toàn văn giấy phép nằm ở file **[LICENSE](./LICENSE)** đi kèm repo. Tóm tắt:
+
+- ✅ **ĐƯỢC PHÉP**: Tự do xem, sửa đổi, biến tấu mã nguồn để phục vụ nhu cầu / công việc cá nhân (ví dụ: tối ưu website local, học tập).
+- ❌ **KHÔNG ĐƯỢC PHÉP**: Sử dụng mã nguồn (nguyên bản hoặc biến tấu) cho các mục đích thương mại, tham gia nhận thưởng / săn giải thưởng tại các cuộc thi, hoặc phục vụ mục đích thương mại của bất kỳ tổ chức / doanh nghiệp nào.
+
+Nếu muốn sử dụng ngoài phạm vi trên (ví dụ mục đích thương mại), vui lòng liên hệ trực tiếp tác giả dự án để xin phép.
+
+Dự án cũng sử dụng các thư viện mã nguồn mở, miễn phí bên thứ ba sau (giấy phép riêng của từng thư viện vẫn giữ nguyên, không bị ảnh hưởng bởi CC BY-NC 4.0 của phần mã nguồn Picture-Lite):
 
 - [CustomTkinter](https://github.com/TomSchimansky/CustomTkinter) (MIT License)
 - [Pillow](https://python-pillow.org/) (HPND License)
-
-Bạn có thể tự do sử dụng, chỉnh sửa và phân phối lại mã nguồn này.
