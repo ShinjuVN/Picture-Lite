@@ -36,7 +36,7 @@ Chọn hướng dẫn phù hợp với nhu cầu của bạn:
 Nếu bạn chỉ muốn cài phần mềm để sử dụng ngay mà không cần quan tâm đến mã nguồn Python:
 
 1. Truy cập vào mục **[Releases](../../releases#release-Picture-Lite-Install)** của dự án trên GitHub.
-2. Tải về file cài đặt mới nhất: **]Setup-Picture-Lite.exe](https://github.com/ShinjuVN/Picture-Lite/releases/download/Picture-Lite-Install/Setup-Picture-Lite.exe)** (hoặc bản Portable **[Picture-Lite-Portable.exe](https://github.com/ShinjuVN/Picture-Lite/releases/download/Picture-Lite-Install/PictureLite-Portable-v1.0.0-beta1.exe)** nếu không muốn cài đặt).
+2. Tải về file cài đặt mới nhất: **[Setup-Picture-Lite.exe](https://github.com/ShinjuVN/Picture-Lite/releases/download/Picture-Lite-Install/Setup-Picture-Lite.exe)** (hoặc bản Portable **[Picture-Lite-Portable.exe](https://github.com/ShinjuVN/Picture-Lite/releases/download/Picture-Lite-Install/PictureLite-Portable-v1.0.0-beta1.exe)** nếu không muốn cài đặt).
 3. Mở file **setup-Picture-Lite.exe** vừa tải về, làm theo các bước hướng dẫn trên màn hình cài đặt (chọn đường dẫn cài đặt, bấm *Next*).
 4. Sau khi hoàn tất, bạn có thể khởi chạy ứng dụng trực tiếp từ **Shortcut ngoài Desktop** hoặc trong Menu Start.
 
