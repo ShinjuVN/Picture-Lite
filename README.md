@@ -36,7 +36,7 @@ Chọn hướng dẫn phù hợp với nhu cầu của bạn:
 Nếu bạn chỉ muốn cài phần mềm để sử dụng ngay mà không cần quan tâm đến mã nguồn Python:
 
 1. Truy cập vào mục **[Releases](../../releases#release-Picture-Lite-Install)** của dự án trên GitHub.
-2. Tải về file cài đặt mới nhất: **[Setup-Picture-Lite.exe](https://github.com/ShinjuVN/Picture-Lite/releases/download/Picture-Lite-Install/Setup-Picture-Lite.exe)** (hoặc bản Portable **[Picture-Lite-Portable.exe](https://github.com/ShinjuVN/Picture-Lite/releases/download/Picture-Lite-Install/PictureLite-Portable-v1.0.0-beta1.exe)** nếu không muốn cài đặt).
+2. Tải về file cài đặt mới nhất: **Setup-Picture-Lite.exe** (hoặc bản Portable **Picture-Lite-Portable.exe** nếu không muốn cài đặt).
 3. Mở file **setup-Picture-Lite.exe** vừa tải về, làm theo các bước hướng dẫn trên màn hình cài đặt (chọn đường dẫn cài đặt, bấm *Next*).
 4. Sau khi hoàn tất, bạn có thể khởi chạy ứng dụng trực tiếp từ **Shortcut ngoài Desktop** hoặc trong Menu Start.
 
@@ -164,7 +164,8 @@ Dự án này được phát hành dưới giấy phép **[Creative Commons Attr
 - ❌ **KHÔNG ĐƯỢC PHÉP**: Sử dụng mã nguồn (nguyên bản hoặc biến tấu) cho các mục đích thương mại, tham gia nhận thưởng / săn giải thưởng tại các cuộc thi, hoặc phục vụ mục đích thương mại của bất kỳ tổ chức / doanh nghiệp nào.
 
 Nếu muốn sử dụng ngoài phạm vi trên (ví dụ mục đích thương mại), vui lòng liên hệ trực tiếp tác giả dự án để xin phép.
-Lưu ý: Giấy phép CC BY-NC 4.0 hiện tại áp dụng trên toàn bộ các commit thuộc repository này không có ngoại lệ kể cả các commit cũ sử dụng README cũ
+
+> **Lưu ý:** Giấy phép CC BY-NC 4.0 hiện tại áp dụng trên **toàn bộ các commit thuộc repository này, không có ngoại lệ** — kể cả các commit cũ ở thời điểm sử dụng README/LICENSE trước đây.
 
 Dự án cũng sử dụng các thư viện mã nguồn mở, miễn phí bên thứ ba sau (giấy phép riêng của từng thư viện vẫn giữ nguyên, không bị ảnh hưởng bởi CC BY-NC 4.0 của phần mã nguồn Picture-Lite):
 
